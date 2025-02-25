@@ -56,6 +56,7 @@ header {
   box-sizing: border-box;
   z-index: 10;
   flex-wrap: nowrap;
+  padding-top: 2em;
 }
 /* _____________________________________________________________Logo_______________________________________________________*/
 
@@ -67,11 +68,6 @@ header {
   padding: 0em 0em 0em 4em;
 }
 /* _________________________________________________________nav buttons______________________________________________________*/
-
-.nav-bar-button {
-  position: relative;
-  z-index: 10;
-}
 
 .nav-bar > span > img {
   display: flex;
@@ -91,6 +87,8 @@ header {
   margin: auto;
   width: 50%;
   padding: 0 0 0.1em 14em;
+  position: relative;
+  z-index: 10;
 }
 
 .nav-bar-button button {
@@ -103,7 +101,7 @@ header {
   border-radius: 0.2em;
 }
 .nav-bar-button button:first-child {
-  width: 20%;
+  width: 25%;
   height: 4.5vh;
   font-style: normal;
   font-size: 0.9rem;
@@ -118,7 +116,7 @@ header {
   align-items: center;
   font-optical-sizing: auto;
   border-radius: 0.2em;
-  margin: 0;
+  margin: 0 0.5em 0 0;
 }
 .nav-bar-button > button:first-child svg{
   display: flex;
