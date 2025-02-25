@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-:root{
-  --primary-color:rgb(218, 0, 0);
+:root {
+  --primary-color: rgb(218, 0, 0);
+}
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 * {
-
   font-family: "Nunito Sans", serif;
   font-optical-sizing: auto;
   font-weight: 700;
@@ -13,48 +16,52 @@
   margin: 0;
   padding: 0;
 }
-
+/* --------------------------header---------------------------- */
 header {
-  width: 100%;
-  height: 720px;
+  width: 100vw;
+  height: 120vh;
   position: relative;
   background-image: url("Assets/background.jpg");
   object-fit: cover;
   object-position: center;
   box-sizing: border-box;
-  -webkit-box-shadow: inset 0px -31px 176px 84px rgba(0,0,0,1);
--moz-box-shadow: inset 0px -31px 176px 84px rgba(0,0,0,1);
-box-shadow: inset 0px -31px 176px 84px rgba(0,0,0,1);
-  background-position: center 17.5%;
+  -webkit-box-shadow: inset 0px -31px 176px 84px rgba(0, 0, 0, 1);
+  -moz-box-shadow: inset 0px -31px 176px 84px rgba(0, 0, 0, 1);
+  box-shadow: inset 0px -31px 176px 84px rgba(0, 0, 0, 1);
+  background-position: 0.01em -1.45em;
   background-repeat: no-repeat;
   background-size: cover;
+  object-fit: cover;
 }
 .head {
   position: absolute;
   top: 0;
   background-color: black;
   width: 100%;
-  height: 720px;
+  height: 100%;
   opacity: 0.59;
 }
+
+/* --------------------navigation bar and buttons----------------------------------- */
 .nav-bar {
   display: flex;
   align-items: center;
-  max-width: 90vw;
-  height: 90px;
+  max-width: 90%;
+  height: 5.6em;
   margin: auto;
   justify-content: space-between;
   box-sizing: border-box;
   z-index: 10;
 }
+/* -------------Logo----------------------------------- */
 .logo-svg {
   width: 100px;
   height: 59.5px;
   position: relative;
   z-index: 10;
-  padding: 0 0 2px 78.6px;
+  padding: 0 0 2px 78px;
 }
-
+/* ---------------------------nav buttons-------------------- */
 .nav-bar-button {
   position: relative;
   z-index: 10;
@@ -75,30 +82,30 @@ box-shadow: inset 0px -31px 176px 84px rgba(0,0,0,1);
   align-items: center;
   flex-direction: row;
   margin: auto;
-  padding: 0;
   width: 50%;
-  padding: 0 0 1.5px 240px;
+  padding: 0 0 0.1em 14em;
+  /* padding: 0 0 1.5px 240px; */
 }
 
 .nav-bar-button button {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px;
-  margin: 0 7px;
+  padding: 1em;
+  margin: 0 0.3em;
   border: 1px solid transparent;
-  border-radius: 3.5px;
+  border-radius: 0.2em;
 }
 .nav-bar-button button:first-child {
-  width: 125px;
-  height: 32px;
+  width: 7em;
+  height: 2em;
   font-style: normal;
-  font-size: 1.06rem;
+  font-size: 1rem;
   font-weight: 550;
   background-color: transparent;
-  border: 1px solid grey;
+  border: 0.01em solid grey;
   color: white;
-  padding: 1px 1.2px;
+  padding: 0.2em;
   box-sizing: border-box;
   display: flex;
   justify-content: space-evenly;
@@ -106,112 +113,489 @@ box-shadow: inset 0px -31px 176px 84px rgba(0,0,0,1);
   font-optical-sizing: auto;
 }
 .nav-bar-button button:last-child {
-  width: 76px;
-  height: 32px;
+  width: 5em;
+  height: 2.2em;
   font-style: normal;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: white;
   background-color: var(--primary-color);
-  border: 1px solid var(--primary-color);
-  padding: 1px 1.2px;
+  border: 0.5em solid var(--primary-color);
+  padding: 0em;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .nav-bar-button > button svg {
-  width: 18px;
+  width: 1em;
+}
+
+/* -----------------------------------Text--------------------- */
+.text-started {
+  justify-content: flex-end;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-top: 12em;
 }
 .text-template {
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   margin: auto;
   justify-content: center;
-  width: 100%;
-  height: 80%;
+  width: 100vw;
+  height: 40vh;
   flex-direction: column;
   color: white;
   z-index: 10;
   position: relative;
   box-sizing: border-box;
-  padding: 20px 0 0 0;
+  padding: auto;
+  text-align: center;
+  line-height: 1.1;
+  gap: 20px;
 }
 .text-template > span:first-child {
   display: flex;
-  font-size: 60px;
-  width: 40%;
+  font-size: 3.55rem;
   flex-wrap: nowrap;
   justify-content: center;
   align-self: center;
   flex-direction: column;
   text-align: center;
   font-weight: 900;
-  margin: 1.0em auto 0.1em auto;
-  padding: 10px;
-  letter-spacing: -2px;
-  line-height: 1.2;
+  margin: auto;
+  letter-spacing: -1px;
+  /* background-color: aqua; */
+  width: 35%;
 }
 .text-template > span:nth-child(2) {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 19px;
-  width: 90%;
-  height: 5%;
+  font-size: 1.15rem;
+  width: 30%;
+  height: 10%;
   box-sizing: border-box;
-  margin: 0.3em auto  ;
+  margin-bottom: 0.5em;
+  /* background-color: aqua; */
 }
 
 .text-template > span:nth-child(3) {
-  font-size: 17px;
+  font-size: 1.04rem;
   font-weight: 500;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  line-height: 1.0;
-  margin: 1em auto ;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.1px;
+  padding: 0;
+  width: 50%;
 }
 
-.started{
+/* -----------------------------email and get started----------------------------- */
+.started {
   display: flex;
   position: relative;
-  z-index: 10;
   justify-content: center;
   align-items: center;
-  width: 80%;
-  margin: 0 auto ;
+  width: 40%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 10;
 }
 
-.started input{
-  background-color:transparent;
-  width: 366px;
+.started input {
+  width: 65%;
   height: 56px;
-  border: 1px solid grey;
-  border-radius: 5px;
+  border: 0.05em solid rgb(81, 81, 81);
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 0.3em;
   margin: 0 0.2em;
   line-height: 0;
   text-align: start;
   padding: 0.7em;
   box-sizing: border-box;
-  font-size: 17px;
+  font-size: 1.1rem;
   font-weight: 650;
 }
 
-.started button{
+.started button {
   box-sizing: border-box;
-  background-color:var(--primary-color);
+  background-color: var(--primary-color);
   color: white;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding: 20px;
-  width: 213px;
-  height: 56px;
+  padding: 1.3em;
+  width: 35%;
+  height: 2.5em;
   border: 1px solid var(--primary-color);
-  font-size: 22px;
+  font-size: 1.3rem;
   margin: 0 0.2em;
-  border-radius: 5px;
+  border-radius: 0.3em;
+  font-weight: 600;
 }
+.header-footer {
+  width: 130%;
+  left: -15%;
+  box-sizing: border-box;
+  position: absolute;
+  height: 9%;
+  margin: auto;
+  bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 0.25rem transparent;
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  border-bottom: none;
+  background: radial-gradient(
+      50% 500% at 50% -420%,
+      rgba(64, 97, 231, 0.4) 80%,
+      rgba(0, 0, 0, 0.1) 100%
+    ),
+    black;
+  -webkit-background-clip: padding-box;
+  border-top: 0.22em solid rgb(167, 20, 20);
+  background-clip: padding-box;
+  z-index: 0;
+}
+/* -----------------main section-------------------------------- */
+
+.main-section {
+  background-color: black;
+  display: flex;
+  flex-wrap: nowrap;
+  margin: auto;
+  position: relative;
+  width: 100vw;
+  height: 720px;
+  overflow: hidden;
+}
+
+.trending {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 6.2em;
+  width: 11%;
+  height: 5%;
+  margin: 0;
+  background-color: rgb(0, 0, 0);
+  box-sizing: border-box;
+}
+
+/*------------------------------------ cards carousel --------------------------------------*/
+.trending-cards {
+  background-color: rgb(0, 0, 0);
+  display: inline flex;
+  position: relative;
+  flex-direction: row;
+  width: 80vw;
+  margin: auto;
+  height: 40%;
+  bottom: 10em;
+  left: 0;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 0.3em;
+  box-sizing: border-box;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  border-radius: 0.5em;
+}
+.wrapper > li {
+  border-radius: 10px;
+  padding: 0.5em 1em 0.5em 1em;
+  margin: 0 1em 0 0;
+}
+.wrapper li img {
+  display: flex;
+  list-style: none;
+  border-radius: 0.8em;
+  margin: 0;
+  padding: 0;
+  width: 10em;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+.wrapper h1 {
+  display: flex;
+  position: relative;
+  font-family: sans-serif;
+  text-shadow: 3px 3px 0 #ffffff, -3px 3px 0 #fff, -3px -3px 0 #fff,
+    3px -3px 0 #fff, 3px 3px 0 #ffffff, -3px 3px 0 #fff, -3px -3px 0 #fff,
+    3px -3px 0 #fff;
+  bottom: 1.1em;
+  right: 0.2em;
+  font-size: 8em;
+}
+/* ----------------------hover effect---------------------- */
+.wrapper > li > img:hover {
+  transform: scale(1.1);
+}
+
+/* -------------------second list of cards------------- */
+.card-list-2 {
+  width: 80%;
+  height: 38%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: auto;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: absolute;
+  margin-left: 10%;
+  margin-top: 25%;
+}
+.card-list-2 > div {
+  width: 25%;
+  height: 100%;
+  background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
+  border-radius: 0.7em;
+  margin: 1em;
+  position: relative;
+}
+.card-list-2 img {
+  width: 25%;
+  height: 25%;
+  position: absolute;
+  display: flex;
+  margin: auto;
+  bottom: 1em;
+  right: 1em;
+  box-sizing: border-box;
+}
+.card-list-2 span,
+p {
+  color: #fff;
+  font-weight: 700;
+  box-sizing: border-box;
+}
+.card-list-2 span {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: auto;
+  padding: 1em 1em 0 1em;
+  font-size: 1.38em;
+  box-sizing: border-box;
+}
+
+.card-list-2 p {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: auto;
+  padding: 0.5em 0 0 1em;
+  text-wrap: wrap;
+  font-weight: 500;
+}
+
+/* -------------------------FAQ list----------------- */
+.FAQ {
+  border: 0.1em solid transparent;
+  color: #ffffff;
+  background-color: black;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  width: 100vw;
+  height: 80vh;
+}
+.faq-menu {
+  width: 25%;
+  height: 5%;
+  margin: auto;
+  margin: 0 0 1em 10em;
+  padding: auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+}
+.faq-menu > h1 {
+  font-size: 1.7em;
+}
+.faq-list {
+  position: relative;
+  display: flex;
+  width: 75%;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 0;
+  color: white;
+}
+.faq-list li {
+  display: flex;
+  flex-wrap: nowrap;
+  border: 0.1em solid transparent;
+  width: 75vw;
+  height: 10vh;
+  justify-content: left;
+  padding: 0 0 0 2em;
+  align-items: center;
+  margin: 0.4em 0 0 0.4em;
+  color: white;
+  background-color: #262626;
+  position: relative;
+}
+.faq-list span {
+  color: #ffffff;
+  display: flex;
+  position: relative;
+  font-size: 1.2em;
+  font-weight: 500;
+  position: relative;
+  z-index: 10;
+}
+
+.faq-list img {
+  display: flex;
+  position: absolute;
+  flex-direction: row-reverse;
+  margin: auto;
+  padding: auto;
+  right: 1em;
+  z-index: 20;
+}
+
+/* ________________________footer-area__________________________________ */
+
+#footer-area {
+  width: 100vw;
+  height: 90vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
+}
+
+.again-sign-up > span {
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 100%;
+  line-height: 2.5;
+}
+.footer-sign-up {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.footer-sign-up input {
+  width: 65%;
+  height: 3.18em;
+  border: 0.05em solid rgb(81, 81, 81);
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 0.3em;
+  margin: 0 0.2em;
+  line-height: 0;
+  text-align: start;
+  padding: 0.7em;
+  box-sizing: border-box;
+  font-size: 1.1rem;
+  font-weight: 650;
+  display: flex;
+}
+
+.footer-sign-up button {
+  box-sizing: border-box;
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1.3em;
+  width: 35%;
+  height: 2.5em;
+  border: 1px solid var(--primary-color);
+  font-size: 1.3rem;
+  margin: 0 0.2em;
+  border-radius: 0.3em;
+  font-weight: 700;
+}
+.language-container {
+  display: flex;
+  width: 75%;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.language-container button {
+  width: 9%;
+  height: 4vh;
+  font-style: normal;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background-color: rgba(58, 57, 57, 0.1);
+  border: 0.01em solid grey;
+  color: white;
+  padding: 0.1em;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-optical-sizing: auto;
+  border-radius: 0.2em;
+  margin: 0;
+}
+.language-container button svg{
+  display: flex;
+  width: 100%;
+  height: 1em;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
